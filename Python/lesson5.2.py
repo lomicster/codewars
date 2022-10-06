@@ -29,15 +29,37 @@ def get_sum_of_digits(num):
 
 """strings
 https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7/solutions/python
+def make_upper_case(s):
+    return s.upper()
 https://www.codewars.com/kata/57f759bb664021a30300007d/train/python
+def switcheroo(s):
+    return s.replace("a", "A").replace("b","a").replace("A","b")
 https://www.codewars.com/kata/5b180e9fedaa564a7000009a/solutions/python
+def solve(s):
+    count_up=0
+    count_lo=0
+    for i in s:
+        if i == i.upper():
+            count_up += 1
+        else:
+            count_lo += 1
+    if count_up > count_lo:
+        return s.upper()
+    else:
+        return s.lower()
 https://www.codewars.com/kata/5168bb5dfe9a00b126000018/python
-
-booleans
+def solution(string):
+    return string[::-1]
+"""
+"""booleans
 https://www.codewars.com/kata/56606694ec01347ce800001b/python
+def is_triangle(a, b, c):
+    return (a + b > c) and (b + c > a) and (a + c > b)
 https://www.codewars.com/kata/55afed09237df73343000042/train/python
-
-if//else
+def is_lucky(n):
+    return n % 9 == 0   
+"""
+"""if//else
 https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/python
 https://www.codewars.com/kata/5810085c533d69f4980001cf/train/python
 https://www.codewars.com/kata/5ad0d8356165e63c140014d4/train/python
