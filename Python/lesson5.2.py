@@ -61,20 +61,46 @@ def is_lucky(n):
 """
 """if//else
 https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/python
-https://www.codewars.com/kata/5810085c533d69f4980001cf/train/python
+def sale_hotdogs(n):
+    return n * (100 if n < 5 else 95 if n < 10 else 90)
+#1#https://www.codewars.com/kata/5810085c533d69f4980001cf/train/python
+
 https://www.codewars.com/kata/5ad0d8356165e63c140014d4/train/python
-https://www.codewars.com/kata/55225023e1be1ec8bc000390/python
-https://www.codewars.com/kata/5a6d3bd238f80014a2000187/train/python
+final_grade(exam, projects):
+    return 100 if (exam > 90 or projects > 10) else 90 if (exam > 75 and projects >= 5) else 75 if (exam > 50 and projects >= 2) else 0
+#2#https://www.codewars.com/kata/55225023e1be1ec8bc000390/python
+
+#3#https://www.codewars.com/kata/5a6d3bd238f80014a2000187/train/python
+
 
 for loops
-https://www.codewars.com/kata/5865918c6b569962950002a1/train/python
+#4#https://www.codewars.com/kata/5865918c6b569962950002a1/train/python
 https://www.codewars.com/kata/56b1f01c247c01db92000076/train/python
-
-range
+def double_char(s):
+    sd = ""
+    for i in s:
+        i = i * 2
+        sd += i
+    return sd
+    
+def double_char(s):
+    return "".join([x * 2 for x in s]) 
+       
+"""
+"""range
 https://www.codewars.com/kata/598057c8d95a04f33f00004e/solutions/python
-https://www.codewars.com/kata/56f69d9f9400f508fb000ba7/train/python
+def function(start_num, end_num): 
+    return list(range(start_num+1, end_num))
+#5#https://www.codewars.com/kata/56f69d9f9400f508fb000ba7/train/python
 
 lists
 https://www.codewars.com/kata/57cc975ed542d3148f00015b/train/python
-https://www.codewars.com/kata/5648b12ce68d9daa6b000099/train/python
-https://www.codewars.com/kata/580435ab150cca22650001fb/python"""
+def check(seq, elem):
+    return elem in seq
+#6#https://www.codewars.com/kata/5648b12ce68d9daa6b000099/train/python
+
+https://www.codewars.com/kata/580435ab150cca22650001fb/python
+def filter_lucky(lst):
+    return [el for el in lst if "7" in str(el)]
+"""
+#Resolve 6 more tasks!
