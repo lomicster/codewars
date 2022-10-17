@@ -27,6 +27,11 @@ def string_clean(s):
 
 https://www.codewars.com/kata/56c5847f27be2c3db20009c3
 
+Regular expressions:
+https://towardsdatascience.com/regular-expressions-clearly-explained-with-examples-822d76b037b4
+https://regex101.com/
+https://regexr.com/
+
 Add new item (collections are passed by reference)
 https://www.codewars.com/kata/566dc05f855b36a031000048/python
 
