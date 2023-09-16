@@ -16,8 +16,8 @@ should give a whole number.
 Your task is to create a function that returns true if the given number is a Wilson prime."""
 
 #If your read deascription including wikipedia articles, then you knew that only three Wislon primes found: 5, 13 and 563
-def am_i_wilson(n):
-    return n in (5, 13, 563)
+# def am_i_wilson(n):
+#     return n in (5, 13, 563)
 
 """2. Create a function that returns the CSV representation of a two-dimensional numeric array.
 Example:
@@ -35,11 +35,11 @@ Array's length > 2.
 More details here: https://en.wikipedia.org/wiki/Comma-separated_values
 """
 
-def to_csv_text(array):
-    s = ""
-    for row in array:
-        s += ",".join(str(n) for n in row) + "\n"
-    return s[:-1]  #exclude \n in the end
+# def to_csv_text(array):
+#     s = ""
+#     for row in array:
+#         s += ",".join(str(n) for n in row) + "\n"
+#     return s[:-1]  #exclude \n in the end
 
 #return '\n\.join(','.join(map(str, line)) for line in array)
     #map(fn, iterator) kind of functional programming in Python
@@ -50,8 +50,8 @@ Return the results as an array or list ( depending on language ).
 Examples
 count_by(1,10) #should return [1,2,3,4,5,6,7,8,9,10]
 count_by(2,5) #should return [2,4,6,8,10]"""
-def count_by(x, n):
-    list(range(x, x * n + 1, x))
+# def count_by(x, n):
+#     list(range(x, x * n + 1, x))
 
 
 '''4. https://www.codewars.com/kata/52223df9e8f98c7aa7000062
@@ -67,34 +67,34 @@ Test examples:
 
 # def rot13(message):
 #   return message.encode('rot13')
-def rot13(message):
-    abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM'
-    r = ''
-    for c in message:
-        if c in abc:
-            r += abc[abc.index(c) + 13]
-        else:
-            r += c
-    return r
+# def rot13(message):
+#     abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM'
+#     r = ''
+#     for c in message:
+#         if c in abc:
+#             r += abc[abc.index(c) + 13]
+#         else:
+#             r += c
+#     return r
 
 """HW1. https://www.codewars.com/kata/5da9973d06119a000e604cb6"""
 
-def counting_valleys(s):
-    valleys = 0
-    counter = 0
-    is_valley = False
-    for i in s:
-        if i == 'U':
-            counter += 1
-        elif i == 'D':
-            counter -= 1
-        if counter < 0 and not is_valley:
-            #valleys +=1
-            is_valley = True
-        if counter == 0 and is_valley:
-            valleys += 1
-            is_valley = False
-    return valleys
+# def counting_valleys(s):
+#     valleys = 0
+#     counter = 0
+#     is_valley = False
+#     for i in s:
+#         if i == 'U':
+#             counter += 1
+#         elif i == 'D':
+#             counter -= 1
+#         if counter < 0 and not is_valley:
+#             #valleys +=1
+#             is_valley = True
+#         if counter == 0 and is_valley:
+#             valleys += 1
+#             is_valley = False
+#     return valleys
 
 
 """Variant 2
@@ -116,31 +116,28 @@ Examples:
 user_friendly_size(9999)=>9.76Kb
 user_friendly_size(9999999)=>9.54Mb"""
 
-
-
-
-user_input = int(input('Enter the value in bytes: '))
-
-def user_friendly_size():
-    if user_input <= 1048576:
-        result = f'{round(user_input/1024, 2)} Kb'
-    elif user_input < 1073741824:
-        result = f'{round(user_input/1048576, 2)} Mb'
-    elif user_input < 1099511627776:
-        result = f'{round(user_input/1073741824, 2)} Gb'
-    else:
-        result = f'{round(user_input/1099511627776)} Tb'
-    return result
-
-print(user_friendly_size())
+# user_input = int(input('Enter the value in bytes: '))
+#
+# def user_friendly_size():
+#     if user_input <= 1048576:
+#         result = f'{round(user_input/1024, 2)} Kb'
+#     elif user_input < 1073741824:
+#         result = f'{round(user_input/1048576, 2)} Mb'
+#     elif user_input < 1099511627776:
+#         result = f'{round(user_input/1073741824, 2)} Gb'
+#     else:
+#         result = f'{round(user_input/1099511627776)} Tb'
+#     return result
+#
+# print(user_friendly_size())
 
 # def tests():
 #     assert user_friendly_size() == f'9.54 MB', f'user_input = {user_friendly_size()}'
 
-import os
-file_name = 'lesson3.2.py'
-file_size = os.stat(file_name).st_size
-print(file_size)
+# import os
+# file_name = 'lesson3.2.py'
+# file_size = os.stat(file_name).st_size
+# print(file_size)
 
 """
 import os
@@ -154,3 +151,72 @@ def user_friendly_size(file_size) -> str:
     sym_index = int(math.log(file_size, 2) // 10)
     return f'{file_size / 2 ** (sym_index * 10):.2f} {symbols[sym_index]}'
 """
+
+# 1.	https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd
+# def paperwork(n, m):
+#     if n < 0 or m < 0:
+#         return 0
+#     else:
+#         return n * m
+
+#Ver2
+# def paperwork(n, m):
+#     if n < 0 or m < 0:
+#         return 0
+#     return n * m
+
+# 2.	https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
+# def even_or_odd(number):
+#     if (number % 2 == 0):
+#        return("Even")
+#     else:
+#        return("Odd")
+#
+# Ver2
+# def even_or_odd(number):
+# 	return 'Odd' if number % 2 else 'Even'
+
+# 3.	https://www.codewars.com/kata/5f70c883e10f9e0001c89673
+#def flip(d, a):
+#     if d == 'R':
+#         return sorted(a)
+#     return sorted(a,reverse = True)
+
+#Ver2
+# def flip(d, a):
+#     a.sort()
+#     return a[::-1] if d == 'L' else a
+
+# 4.	https://www.codewars.com/kata/55a996e0e8520afab9000055
+# def cookie(x):
+#     if type(x) == str:
+#         name = "Zach"
+#     elif type(x) == bool:
+#         name = "the dog"
+#     elif type(x) == int or float:
+#         name = "Monica"
+#     return f"Who ate the last cookie? It was {name}!"
+
+# 5.	https://www.codewars.com/kata/56dae9dc54c0acd29d00109a
+# def main (verb, noun):
+#     return verb + noun
+
+# 6.	https://www.codewars.com/kata/53dc23c68a0c93699800041d
+# def smash(words):
+#     return " ".join(words)
+
+# 7.	https://www.codewars.com/kata/56676e8fabd2d1ff3000000c
+# 8.	https://www.codewars.com/kata/57089707fe2d01529f00024a
+# 9.	https://www.codewars.com/kata/55b1fd84a24ad00b32000075
+# 10.	https://www.codewars.com/kata/54530f75699b53e558002076
+# LETTERS is preloaded
+# def nato(word):
+#     return " ".join(LETTERS[x] for x in word.upper())
+
+# 11.	https://www.codewars.com/kata/59b0a6da44a4b7080300008a
+# 12.	https://www.codewars.com/kata/5390bac347d09b7da40006f6
+# 13.	https://www.codewars.com/kata/559e5b717dd758a3eb00005a
+# 14.	https://www.codewars.com/kata/583df40bf30065fa9900010c
+# 15.	https://www.codewars.com/kata/55b051fac50a3292a9000025
+# 16.	*https://www.codewars.com/kata/64c7bbad0a2a00198657013d
+
