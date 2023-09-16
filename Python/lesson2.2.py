@@ -62,21 +62,54 @@
 #     return " ".join(separator.join(list(word)) for word in string_.split())
 
 ##12 https://www.codewars.com/kata/57241e0f440cd279b5000829
-
+# def sum_mul(n, m):
+#     if n == 0 or m == 0:
+#         return 'INVALID'
+#     if n == m:
+#         return n - m
+#     if n < 0 or m < 0:
+#         return 'INVALID'
+#
+#     my_list = [number for number in range(n, m) if number % n == 0]
+#     return sum(my_list)
 ##13 https://www.codewars.com/kata/58261acb22be6e2ed800003a
 # def get_volume_of_cuboid(length, width, height):
 #     return length * width * height
 
 ##14 https://www.codewars.com/kata/58bf9bd943fadb2a980000a7
-
+# def who_is_paying(name):
+#     return [name] if len(name) <= 2 else [name, name[:2]]
 ##15 https://www.codewars.com/kata/53da6d8d112bd1a0dc00008b
 # def reverse_list(l):
 #     l.reverse()
 #     return(l)
 
 ##16 https://www.codewars.com/kata/5875b200d520904a04000003
+#Ver1
+# def enough(cap, on, wait):
+#     if cap - on >= wait:
+#         return 0
+#     else:
+#         return wait - (cap-on)
 
+#Ver2
+# def enough(cap, on, wait):
+#     return max(0, wait - (cap - on))
 ##17 https://www.codewars.com/kata/57eae65a4321032ce000002d
+# def fake_bin(str):
+#     # Use a list comprehension to generate the result string
+#     return ''.join(['0' if int(char) < 5 else '1' for char in str])
+
+#Ver2
+# def fake_bin(str):
+#     res_str = ""
+#     for char in str:
+#         if int(char) < 5:
+#             res_str += '0'
+#         else:
+#             res_str += '1'
+#     return res_str
 
 ##18 https://www.codewars.com/kata/57e76bc428d6fbc2d500036d
-
+# def string_to_array(s):
+#     return s.split(" ")
