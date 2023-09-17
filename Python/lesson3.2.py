@@ -206,17 +206,120 @@ def user_friendly_size(file_size) -> str:
 #     return " ".join(words)
 
 # 7.	https://www.codewars.com/kata/56676e8fabd2d1ff3000000c
+# def find_needle(haystack):
+#     return f"found the needle at position {haystack.index('needle')}"
+
 # 8.	https://www.codewars.com/kata/57089707fe2d01529f00024a
+# def check_alive(health):
+#     if health > 0:
+#         return True
+#     else:
+#         return False
+
+# Ver2
+# def check_alive(health):
+#     return health > 0
+
 # 9.	https://www.codewars.com/kata/55b1fd84a24ad00b32000075
+# def am_I_afraid(day,num):
+#     if day == 'Monday' and num == 12:
+#         return True
+#     elif day == 'Tuesday' and num > 95:
+#         return True
+#     elif day == 'Wednesday' and num == 34:
+#         return True
+#     elif day == 'Thursday' and num == 0:
+#         return True
+#     elif day == 'Friday' and num % 2 ==0:
+#         return True
+#     elif day == 'Saturday' and num == 56:
+#         return True
+#     elif day == 'Sunday' and num in (-666, 666):
+#         return True
+#     else:
+#         return False
+#
+# Ver2
+# def am_I_afraid(day,num):
+#     return {
+#         'Monday':  num == 12,
+#         'Tuesday': num > 95,
+#         'Wednesday': num == 34,
+#         'Thursday': num == 0,
+#         'Friday': num % 2 == 0,
+#         'Saturday': num ==  56,
+#         'Sunday': num == 666 or num == -666,
+#     }[day]
+
 # 10.	https://www.codewars.com/kata/54530f75699b53e558002076
 # LETTERS is preloaded
 # def nato(word):
 #     return " ".join(LETTERS[x] for x in word.upper())
 
 # 11.	https://www.codewars.com/kata/59b0a6da44a4b7080300008a
-# 12.	https://www.codewars.com/kata/5390bac347d09b7da40006f6
-# 13.	https://www.codewars.com/kata/559e5b717dd758a3eb00005a
-# 14.	https://www.codewars.com/kata/583df40bf30065fa9900010c
-# 15.	https://www.codewars.com/kata/55b051fac50a3292a9000025
-# 16.	*https://www.codewars.com/kata/64c7bbad0a2a00198657013d
+# if hour != 12:
+#     if period == "am":
+#         return f"{str(hour).rjust(2, '0')}{str(minute).rjust(2, '0')}"
+#     else:
+#         return f"{hour + 12}{str(minute).rjust(2, '0')}"
+# else:
+#     if period == "am":
+#         return f"00{str(minute).rjust(2, '0')}"
+#     else:
+#         return f"{hour}{str(minute).rjust(2, '0')}"
+#
+# Ver2
+# def to24hourtime(hour, minute, period):
+#     return f'{hour % 12 + (period == "pm") * 12:02}{minute:02}'
 
+# 12.	https://www.codewars.com/kata/5390bac347d09b7da40006f6
+# def to_jaden_case(string):
+#     # Split the input string into words
+#     words = string.split()
+#
+#     # Capitalize each word while preserving apostrophes
+#     capitalized_words = ["`".join([part.capitalize() for part in word.split("`")]) if "`" in word else word.capitalize()
+#                          for word in words]
+#
+#     # Join the capitalized words back into a single string
+#     return " ".join(capitalized_words)
+
+# Ver2
+# def to_jaden_case(string):
+#     return ' '.join(word.capitalize() for word in string.split())
+
+# 13.	https://www.codewars.com/kata/559e5b717dd758a3eb00005a
+# def drop_cap(words):
+#     return " ".join(word.capitalize() if len(word) > 2 else word for word in words.split(" "))
+
+# 14.	https://www.codewars.com/kata/583df40bf30065fa9900010c
+def get_mean(arr,x,y):
+    if  1 < x <= len(arr) and 1 < y <= len(arr):
+        return (sum(arr[:x])/x + sum(arr[-y:])/y) / 2
+    else:
+        return -1
+
+# 15.	https://www.codewars.com/kata/55b051fac50a3292a9000025
+# def filter_string(string):
+#     return int("".join(x for x in string if x.isdecimal()))
+
+Ver2
+# def filter_string(string):
+#     return int(filter(str.isdigit, string))
+# 16.	*https://www.codewars.com/kata/64c7bbad0a2a00198657013d
+# def rev_sub(input_list):
+#     result, sublist = [], []
+#
+#     for num in input_list:
+#         if num % 2 == 0:
+#             sublist.append(num)
+#         else:
+#             if sublist:
+#                 result.extend(reversed(sublist))
+#                 sublist = []
+#             result.append(num)
+#
+#     if sublist:
+#         result.extend(reversed(sublist))
+#
+#     return result
